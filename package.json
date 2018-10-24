@@ -4,12 +4,14 @@
   "description": "Exercise project for CSS-SASS udemy course",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch-css": "nodemon -e scss -x \"npm run compile:sass\""
   },
   "author": "Ivan Taghavi",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.9.4"
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.4"
   },
   "dependencies": {}
 }
