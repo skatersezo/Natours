@@ -1,7 +1,6 @@
 
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
     
     // with the not, the selector matches all elements
@@ -17,7 +16,7 @@
     // the $ symbol acts like "ends with..."
     // the ^ symbol acts like "begin with..."
     [class^="col-"] {
-        background-color: lightblue;
+        // background-color: lightblue; use the color to visualize the boxes
         float: left;
 
         &:not(:last-child) {
