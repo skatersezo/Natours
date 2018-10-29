@@ -2,11 +2,20 @@
 .row {
     max-width: $grid-width;
     margin: 0 auto;
+
+    @include respond(tablet-s) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
     
     // with the not, the selector matches all elements
     // except the last child
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tablet-s) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     @include clearfix;
@@ -21,6 +30,15 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tablet-s) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tablet-s) {
+            width: 100% !important;
         }
     }
 

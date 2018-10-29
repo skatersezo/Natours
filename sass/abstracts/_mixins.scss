@@ -13,3 +13,42 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// Media query manager
+/*
+    General workflow for media querys:
+    base + typography > general layout + grid > page layout > components
+ 
+    Breakpoints:
+    0 - 600px = phone
+    600-900px = tablet small
+    900-1200px = tablet big
+    1200 - 1800px = NORMAL STYLES
+    1800px + = big desktop
+
+    @params: breakpoint
+        -phone
+        -tablet-s
+        -tablet-l
+        -big-desktop
+
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        // media querys dont work properly with REM because it always takes the font-size
+        // value from the browser. 1em = 16px
+        @media (max-width: 37.5em) { @content }; // 600px
+    }
+
+    @if $breakpoint == tablet-s {
+        @media (max-width: 56.25em) { @content }; // 900px
+    }
+
+    @if $breakpoint == tablet-l {
+        @media (max-width: 75em) { @content }; // 1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; // 1800px
+    }
+}
