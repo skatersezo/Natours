@@ -3,6 +3,10 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include respond(tablet-s) {
+        padding: 20rem 0;
+    }
 }
 
 .section-features {
@@ -23,17 +27,29 @@
         // here we are correcting the skew effect for the children of this section
         transform: skewY(7deg);
     }
+
+    @include respond(tablet-s) {
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
+
+    @include respond(tablet-s) {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include respond(tablet-s) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
@@ -43,6 +59,10 @@
         $color-primary-light,
         $color-primary-dark
     );
+
+    @include respond(tablet-s) {
+        padding: 10rem 0;
+    }
 }
 
 .book {
