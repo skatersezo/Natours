@@ -20,6 +20,7 @@
         left: 0;
         width: 100%;
         // this property hiddens the back side of an element
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
