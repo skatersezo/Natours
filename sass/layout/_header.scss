@@ -18,7 +18,7 @@
     // if the resolution is higher than 192dpi
     // and whenever the width is larger than 600px (37.5em)
     // or (the ',' stands for or) the width is larger than 2000px (125em)
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
         background-image:
         linear-gradient(
             to right bottom,
